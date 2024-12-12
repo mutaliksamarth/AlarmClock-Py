@@ -11,10 +11,8 @@ def set_alarm(alarm_time):
 
     while is_running:
         current_time = datetime.datetime.now().strftime("%H:%M:%S")
-
+        print(f"Current Time: {current_time}")
         if current_time == alarm_time:
-            print(f"Current Time: {current_time}")
-
             pygame.mixer.init()
             pygame.mixer.music.load(sound_file)
             pygame.mixer.music.play()
